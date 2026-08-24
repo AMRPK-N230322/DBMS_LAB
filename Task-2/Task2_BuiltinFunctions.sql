@@ -1,6 +1,6 @@
-#CREATE DATABASE PlayStoreDB;
+CREATE DATABASE PlayStoreDB;
 USE PlayStoreDB;
-/*CREATE TABLE DEVELOPERS
+CREATE TABLE DEVELOPERS
 (
 DeveloperID INT Primary Key,
 DeveloperName VARCHAR(60) Not Null,
@@ -13,10 +13,10 @@ VALUES
 (102, "Meta PLatform", "USA", 2004),
 (103, "Spotify AB", "Sweden", 2006),
 (104, "Canva Pty Ltd", "Australia", 2012),
-(105, "BYJU'S", "India", 2011);*/
+(105, "BYJU'S", "India", 2011);
 SELECT * FROM DEVELOPERS; #return the table with the inserted records
 
-/*CREATE TABLE PUBLISHERS
+CREATE TABLE PUBLISHERS
 (
 PublisherID INT Primary Key,
 PublisherName VARCHAR(60),
@@ -28,10 +28,10 @@ VALUES
 (201,"Google Play","California","support@google.com"),
 (202,"Samsung Galaxy Store","Seoul","support@samsung.com"),
 (203,"Huawei App Gallery","Shenzhen","support@huawei.com"),
-(204,"Amazon App Store","Seattle","support@amazon.com");*/
+(204,"Amazon App Store","Seattle","support@amazon.com");
 SELECT * FROM PUBLISHERS;
 
-/*CREATE TABLE CATEGORIES
+CREATE TABLE CATEGORIES
 (
 CategoryID INT Primary Key,
 CategoryName VARCHAR(40),
@@ -43,10 +43,10 @@ VALUES
 (302,"Productivity",3),
 (303,"Music",12),
 (304,"Social",13),
-(305,"Gaming",16);*/
+(305,"Gaming",16);
 SELECT * FROM CATEGORIES;
 
-/*CREATE TABLE APPS
+CREATE TABLE APPS
 (
 AppID INT Primary Key,
 AppName VARCHAR(60),
@@ -66,7 +66,7 @@ VALUES
 (1005,"Canva",104,201,302,4.7,5000000,0),
 (1006,"BYJU'S Learning",105,201,301,4.3,100000000,299),
 (1007,"Candy Crush",102,204,305,4.6,1000000000,0),
-(1008,"Temple Run",104,203,305,4.2,50000000,0);*/
+(1008,"Temple Run",104,203,305,4.2,50000000,0);
 SELECT * FROM APPS;
 DESCRIBE APPS;
 
