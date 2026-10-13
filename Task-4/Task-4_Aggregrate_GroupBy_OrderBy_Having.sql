@@ -1,0 +1,80 @@
+USE PlaystoreDB;
+#--------- Level 0 --------
+
+SELECT COUNT(*)
+FROM APPS;
+
+SELECT AVG(Rating)
+FROM APPS;
+
+SELECT MAX(Rating)
+FROM APPS;
+
+SELECT MIN(Rating)
+FROM APPS;
+
+SELECT SUM(Downloads)
+FROM APPS;
+
+SELECT *
+FROM APPS
+ORDER BY Rating DESC;
+
+#------- Level 1 --------
+
+SELECT COUNT(*)
+FROM APPS
+GROUP BY CategoryID;
+
+SELECT AVG(Rating)
+FROM APPS
+GROUP BY CategoryID;
+
+SELECT MAX(Price),MIN(Price)
+FROM APPS;
+
+SELECT *
+FROM APPS
+ORDER BY Downloads DESC;
+
+SELECT COUNT(*)
+FROM APPS
+GROUP BY DeveloperID;
+
+SELECT CategoryID,COUNT(*)
+FROM APPS
+GROUP BY CategoryID
+HAVING COUNT(*)> 1;
+
+#------ Level 2 -----
+
+SELECT DeveloperID,SUM(Downloads)
+FROM APPS
+GROUP BY DeveloperID;
+
+SELECT PublisherID,AVG(Rating)
+FROM APPS
+GROUP BY PublisherID;
+
+SELECT DeveloperID,COUNT(*)
+FROM APPS
+GROUP BY DeveloperID
+HAVING Count(*) > 1;
+
+SELECT CategoryID,AVG(Rating)
+FROM APPS
+GROUP BY CategoryID
+HAVING AVG(Rating) > 4.3;
+
+SELECT CategoryID,count(*)
+FROM APPS
+GROUP BY CategoryID
+ORDER BY COUNT(*) DESC;
+
+SELECT AppName,Rating
+FROM APPS
+WHERE Rating = (SELECT MAX(Rating) FROM APPS);
+
+SELECT SUM(Price)
+FROM APPS
+GROUP BY DeveloperID;
